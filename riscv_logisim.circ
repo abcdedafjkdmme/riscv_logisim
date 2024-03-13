@@ -140,8 +140,7 @@
     <comp lib="4" loc="(1010,360)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 32
-ffffff93 13 ffffff93 13 ffffff93 17 13 13
-23
+0 2083
 </a>
       <a name="dataWidth" val="32"/>
     </comp>
@@ -187,17 +186,17 @@ ffffff93 13 ffffff93 13 ffffff93 17 13 13
       <a name="label" val="Instruction"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(1060,370)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Clk"/>
+    </comp>
     <comp lib="0" loc="(1060,900)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="MemInput"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(1080,350)" name="Constant"/>
-    <comp lib="0" loc="(1080,370)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Clk"/>
-    </comp>
+    <comp lib="0" loc="(1090,350)" name="Constant"/>
     <comp lib="0" loc="(1090,570)" name="Constant">
       <a name="value" val="0x0"/>
       <a name="width" val="5"/>
@@ -413,9 +412,6 @@ ffffff93 13 ffffff93 13 ffffff93 17 13 13
       <a name="label" val="Instruction"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(790,310)" name="Constant">
-      <a name="width" val="32"/>
-    </comp>
     <comp lib="0" loc="(810,710)" name="Splitter">
       <a name="fanout" val="32"/>
       <a name="incoming" val="32"/>
@@ -450,10 +446,6 @@ ffffff93 13 ffffff93 13 ffffff93 17 13 13
       <a name="label" val="RS2"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="0" loc="(880,360)" name="Constant">
-      <a name="value" val="0x0"/>
-      <a name="width" val="32"/>
-    </comp>
     <comp lib="2" loc="(1150,560)" name="Multiplexer">
       <a name="width" val="5"/>
     </comp>
@@ -469,39 +461,41 @@ ffffff93 13 ffffff93 13 ffffff93 17 13 13
     <comp lib="2" loc="(2000,560)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="3" loc="(850,320)" name="Adder">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="3" loc="(940,330)" name="Adder">
-      <a name="width" val="32"/>
-    </comp>
     <comp lib="4" loc="(1090,300)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="ProgramCounter"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="8" loc="(855,380)" name="Text">
-      <a name="text" val="Placeholder"/>
+    <comp lib="8" loc="(2664,1017)" name="Text">
+      <a name="color" val="#4a09f0"/>
+      <a name="text" val="The pc is measured in bytes, not words So it needs to be adjusted when used in rom addr"/>
+    </comp>
+    <comp lib="8" loc="(2666,986)" name="Text">
+      <a name="color" val="#f02138"/>
+      <a name="text" val="The first rom instruction cannot be used !!"/>
+    </comp>
+    <comp lib="8" loc="(2888,592)" name="Text">
+      <a name="color" val="#4a09f0"/>
+      <a name="text" val="MemAddr is probably measured in bytes too"/>
     </comp>
     <comp loc="(1290,820)" name="ExtendMemInput"/>
     <comp loc="(1500,980)" name="ControlLogic"/>
     <comp loc="(1560,520)" name="RegisterFile"/>
     <comp loc="(1940,580)" name="ImmGen"/>
     <comp loc="(2330,540)" name="ALU"/>
+    <comp loc="(690,250)" name="PCLogic"/>
     <wire from="(1020,820)" to="(1070,820)"/>
+    <wire from="(1060,370)" to="(1090,370)"/>
     <wire from="(1060,840)" to="(1060,900)"/>
     <wire from="(1060,840)" to="(1070,840)"/>
-    <wire from="(1080,370)" to="(1090,370)"/>
     <wire from="(1090,570)" to="(1120,570)"/>
     <wire from="(1100,550)" to="(1120,550)"/>
     <wire from="(1130,580)" to="(1130,630)"/>
     <wire from="(1150,330)" to="(1200,330)"/>
     <wire from="(1150,560)" to="(1340,560)"/>
     <wire from="(1200,330)" to="(1200,350)"/>
-    <wire from="(1200,330)" to="(1240,330)"/>
     <wire from="(1210,520)" to="(1340,520)"/>
     <wire from="(1210,540)" to="(1340,540)"/>
-    <wire from="(1240,260)" to="(1240,330)"/>
     <wire from="(1260,580)" to="(1300,580)"/>
     <wire from="(1280,600)" to="(1280,610)"/>
     <wire from="(1280,600)" to="(1300,600)"/>
@@ -554,20 +548,12 @@ ffffff93 13 ffffff93 13 ffffff93 17 13 13
     <wire from="(2620,770)" to="(2640,770)"/>
     <wire from="(2620,900)" to="(2640,900)"/>
     <wire from="(700,1110)" to="(730,1110)"/>
-    <wire from="(710,260)" to="(1240,260)"/>
-    <wire from="(710,260)" to="(710,330)"/>
-    <wire from="(710,330)" to="(810,330)"/>
     <wire from="(710,710)" to="(750,710)"/>
     <wire from="(750,710)" to="(750,750)"/>
     <wire from="(750,710)" to="(810,710)"/>
-    <wire from="(790,310)" to="(810,310)"/>
-    <wire from="(850,320)" to="(900,320)"/>
     <wire from="(850,510)" to="(860,510)"/>
     <wire from="(850,590)" to="(860,590)"/>
     <wire from="(850,640)" to="(860,640)"/>
-    <wire from="(880,340)" to="(880,360)"/>
-    <wire from="(880,340)" to="(900,340)"/>
-    <wire from="(940,330)" to="(1090,330)"/>
   </circuit>
   <circuit name="ALU">
     <a name="appearance" val="logisim_evolution"/>
@@ -2404,5 +2390,22 @@ ffffff93 13 ffffff93 13 ffffff93 17 13 13
     <wire from="(520,720)" to="(570,720)"/>
     <wire from="(590,750)" to="(590,770)"/>
     <wire from="(610,710)" to="(640,710)"/>
+  </circuit>
+  <circuit name="PCLogic">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="PCLogic"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(250,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="PCPrev"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(650,390)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="PCNew"/>
+      <a name="width" val="32"/>
+    </comp>
   </circuit>
 </project>
