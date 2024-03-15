@@ -235,6 +235,9 @@
       <a name="label" val="ALUCompOp"/>
       <a name="width" val="3"/>
     </comp>
+    <comp lib="0" loc="(1540,1220)" name="Tunnel">
+      <a name="label" val="SetPcLSBTo0"/>
+    </comp>
     <comp lib="0" loc="(1540,980)" name="Tunnel">
       <a name="label" val="ALUOperation"/>
       <a name="width" val="3"/>
@@ -523,6 +526,7 @@
     <wire from="(1500,1160)" to="(1540,1160)"/>
     <wire from="(1500,1180)" to="(1540,1180)"/>
     <wire from="(1500,1200)" to="(1540,1200)"/>
+    <wire from="(1500,1220)" to="(1540,1220)"/>
     <wire from="(1500,980)" to="(1540,980)"/>
     <wire from="(1810,400)" to="(1850,400)"/>
     <wire from="(1810,430)" to="(1820,430)"/>
@@ -1811,7 +1815,7 @@
       <a name="facing" val="east"/>
       <a name="label" val="IsJALInstr"/>
     </comp>
-    <comp lib="0" loc="(780,1840)" name="Tunnel">
+    <comp lib="0" loc="(770,1840)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="IsJALRInstr"/>
     </comp>
@@ -1897,6 +1901,10 @@
       <a name="value" val="0x5"/>
       <a name="width" val="5"/>
     </comp>
+    <comp lib="0" loc="(870,2210)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IsJALRInstr"/>
+    </comp>
     <comp lib="0" loc="(870,500)" name="Constant">
       <a name="value" val="0xc"/>
       <a name="width" val="5"/>
@@ -1963,6 +1971,12 @@
     <comp lib="0" loc="(890,220)" name="Constant">
       <a name="value" val="0x8"/>
       <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(890,2210)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="SetPcLSBTo0"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(890,480)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -2153,7 +2167,7 @@
     <wire from="(440,730)" to="(470,730)"/>
     <wire from="(440,880)" to="(440,1130)"/>
     <wire from="(770,1820)" to="(800,1820)"/>
-    <wire from="(780,1840)" to="(800,1840)"/>
+    <wire from="(770,1840)" to="(800,1840)"/>
     <wire from="(780,1860)" to="(800,1860)"/>
     <wire from="(780,640)" to="(820,640)"/>
     <wire from="(780,710)" to="(820,710)"/>
@@ -2177,6 +2191,7 @@
     <wire from="(860,700)" to="(950,700)"/>
     <wire from="(860,80)" to="(900,80)"/>
     <wire from="(870,2040)" to="(900,2040)"/>
+    <wire from="(870,2210)" to="(890,2210)"/>
     <wire from="(870,500)" to="(900,500)"/>
     <wire from="(870,550)" to="(900,550)"/>
     <wire from="(870,60)" to="(900,60)"/>
